@@ -1,9 +1,5 @@
 package physics.math;
 
-/**
- * Utility helpers for vector math and batch operations.
- * Corrected to match the APIs of Vector2D, Vector2F and Vector2I.
- */
 public final class VectorMath {
 
     private VectorMath() {}
@@ -169,3 +165,4 @@ public final class VectorMath {
         }
     }
 }
+
