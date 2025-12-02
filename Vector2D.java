@@ -3,19 +3,6 @@ package physics.math;
 import java.util.Objects;
 import java.util.function.DoubleUnaryOperator;
 
-/**
- * Mutable 2D vector optimized for physics engine usage.
- *
- * API style: mutating-first then pure variants.
- * - Mutating methods: add(...), sub(...), mul(...), div(...), etc. (modify this and return it)
- * - Pure methods: added(...), subtracted(...), multiplied(...), divided(...), etc. (return new instance)
- *
- * Design goals:
- * - Minimal allocations: provide in-place (mutating) ops for hot loops and pure ops when needed.
- * - Predictable behaviour: normalize() returns ZERO on zero-length (no NaN).
- * - Useful pure-math helpers for solvers & integrators.
- * - No geometry helpers (no rotate/angle/project-to-line/reflect).
- */
 public class Vector2D implements Cloneable, Comparable<Vector2D> {
 
     // ---------------------------------------------------------------------
@@ -324,3 +311,4 @@ public class Vector2D implements Cloneable, Comparable<Vector2D> {
     // ---------------------------------------------------------------------
     private Vector2D mulInPlace(double s) { this.x *= s; this.y *= s; return this; }
 }
+
